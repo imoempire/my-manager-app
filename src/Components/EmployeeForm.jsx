@@ -82,7 +82,7 @@ class EmployeeForm extends Component {
                         </div>
                         
                         </div>
-                        <button className="btn btn-primary" type="submit">Submit form</button>
+                        <button className="btn btn-primary" type="submit">ADD EMPLOYEE</button>
                     </form>
 
 
