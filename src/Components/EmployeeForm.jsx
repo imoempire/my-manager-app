@@ -35,6 +35,7 @@ class EmployeeForm extends Component {
             <>
                 <form className="needs-validation" novalidate onSubmit={this.handleSubmit}>
                     <div className="form-row">
+                        <h3>PERSONAL INFO</h3>
                         <div className="col-md-12 mb-3">
                             <label for="validationCustom01">First name</label>
                             <input type="text" className="form-control" id="validationCustom01" 
@@ -68,7 +69,7 @@ class EmployeeForm extends Component {
                             <input type="text" className="form-control" id="validationCustom02" 
                             name="HomeAddress" value={this.state.HomeAddress}  onChange={this.handleChange} required />
                         </div>
-
+                            <h3>JOB INFO</h3>
                         <div className="col-md-11 mb-3">
                             <label for="validationCustom05">Role</label>
                             <input type="text" className="form-control" id="validationCustom05" 
