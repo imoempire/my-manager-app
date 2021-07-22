@@ -77,7 +77,7 @@ class EmployeeForm extends Component {
                         <div className="col-md-6 mb-3">
                             <label for="validationCustom05">Salary</label>
                             <input type="Number" className="form-control" id="validationCustom05" 
-                            name="Salary" value={this.state.Salary} onChange={this.handleChange} required />
+                            name="Salary" value={this.state.Salary} onChange={this.handleChange} placeholder="Cedis" required />
                         </div>
                         
                         </div>

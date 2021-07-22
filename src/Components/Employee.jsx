@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Employee({ Employ }) {
   return (
-    <>
+    <div className="input">
       <h3>FirstName: {Employ.First} </h3>
       <h3>LastName: {Employ.Last} </h3>
       <h3>Email: {Employ.Email}</h3>
@@ -10,6 +10,6 @@ export default function Employee({ Employ }) {
       <h3>Home Address: {Employ.HomeAddress}</h3>
       <h3>Job Role: {Employ.Role}</h3>
       <h3>Salary: {Employ.Salary}</h3>
-    </>
+    </div>
   );
 }
