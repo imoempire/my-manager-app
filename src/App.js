@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import EmployeeForm from "./Components/EmployeeForm";
 import EmpolyeeList from "./Components/EmpolyeeList";
-import image from './images.JPG'
 
 export default class App extends Component {
   constructor(props) {
@@ -17,8 +16,23 @@ export default class App extends Component {
     newEmployee.id = Math.random().toString();
     this.setState({
       Employees: [...this.state.Employees, newEmployee]
-    })
-  }
+    });
+  };
+
+  handleDelete=(EmployeesId)=>{
+    const newMembers = this.state.Employees.filter((employee)=>{
+      return employee.id !== EmployeesId;
+    });
+    this.setState({ Employees: newMembers})
+  };
+
+  handleEdit=(update)=>{
+    this.setState({
+      Employees: this.state.Employees.map((employee)=>
+      employee.id === update.id ? update : employee ),
+    });
+  };
+
   render() {
     return (
     <>
@@ -50,7 +64,9 @@ export default class App extends Component {
      </div>
      <div className="col-6">
      <EmpolyeeList 
-       Employees={this.state.Employees} />
+       Employees={this.state.Employees}
+       handleDelete={this.handleDelete}
+       handleEdit={this.handleEdit} />
       </div>
       </div>
      </div>
